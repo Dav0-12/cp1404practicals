@@ -20,6 +20,7 @@ def main():
             print_stars(score)
         else:
             print("Invalid choice")
+        choice = input(">> ").upper()
     print("Farewell")
 
 
@@ -43,3 +44,6 @@ def evaluate_result(score):
 
 def print_stars(score):
     print("*" * score)
+
+
+main()
