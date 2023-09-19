@@ -1,6 +1,6 @@
 """
 CP1404/CP5632 - Practical
-Pseudocode for temperature conversion
+Code for temperature conversion
 """
 
 MENU = """C - Convert Celsius to Fahrenheit
