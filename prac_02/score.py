@@ -7,6 +7,7 @@ import random
 
 
 def main():
+    """Get score from user, get a random score, and then print the grade of both"""
     score = float(input("Enter score: "))
     evaluation = evaluate_grade(score)
     print(evaluation)
@@ -17,6 +18,7 @@ def main():
 
 
 def evaluate_grade(score):
+    """From given score determine the grade"""
     if score < 0 or score > 100:
         return "Invalid score"
     elif score >= 90:

@@ -1,4 +1,7 @@
-"""Score Menu System"""
+"""
+CP1404/CP5632 - Practical
+Score Menu System
+"""
 
 MENU = """(G)et a valid score (must be 0-100 inclusive)
 (P)rint result
@@ -8,6 +11,7 @@ print(MENU)
 
 
 def main():
+    """Print main menu and ask for input"""
     choice = input(">> ").upper()
     score = 0
     while choice != "Q":
@@ -25,6 +29,7 @@ def main():
 
 
 def get_valid_score():
+    """Get score from user, if it isn't between 0 and 100 inclusive continue to prompt"""
     score = int(input("Score: "))
     while score > 100 or score < 0:
         score = int(input("Score: "))
@@ -32,6 +37,9 @@ def get_valid_score():
 
 
 def evaluate_result(score):
+    """Receives a score and determines the corresponding grade"""
+    # Note: The validation is not required for this program as the score is already
+    # validated, but for future flexibility it was kept
     if score < 0 or score > 100:
         return "Invalid score"
     elif score >= 90:
@@ -43,6 +51,7 @@ def evaluate_result(score):
 
 
 def print_stars(score):
+    """Print score number of stars"""
     print("*" * score)
 
 
