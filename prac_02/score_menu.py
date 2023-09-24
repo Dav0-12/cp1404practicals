@@ -18,8 +18,8 @@ def main():
         if choice == "G":
             score = get_valid_score()
         elif choice == "P":
-            evaluation = evaluate_result(score)
-            print(evaluation)
+            grade = grade_score(score)
+            print(grade)
         elif choice == "S":
             print_stars(score)
         else:
@@ -36,7 +36,7 @@ def get_valid_score():
     return score
 
 
-def evaluate_result(score):
+def grade_score(score):
     """Receives a score and determines the corresponding grade"""
     # Note: The validation is not required for this program as the score is already
     # validated, but for future flexibility it was kept
