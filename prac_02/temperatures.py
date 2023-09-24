@@ -6,11 +6,11 @@ Code for temperature conversion
 MENU = """C - Convert Celsius to Fahrenheit
 F - Convert Fahrenheit to Celsius
 Q - Quit"""
-print(MENU)
 
 
 def main():
     """Get user input from menu to decide what temperature conversion is required"""
+    print(MENU)
     choice = input(">>> ").upper()
     while choice != "Q":
         if choice == "C":
