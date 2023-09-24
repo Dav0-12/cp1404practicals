@@ -7,11 +7,11 @@ MENU = """(G)et a valid score (must be 0-100 inclusive)
 (P)rint result
 (S)how stars
 (Q)uit"""
-print(MENU)
 
 
 def main():
     """Print main menu and ask for input"""
+    print(MENU)
     choice = input(">> ").upper()
     score = 0
     while choice != "Q":
