@@ -12,13 +12,13 @@ SPECIAL_CHARACTERS = "!@#$%^&*()_-=+`~,./'[]<>?{}|\\"
 def main():
     """Program to get and check a user's password."""
     print("Please enter a valid password")
-    print("Your password must be between", MIN_LENGTH, "and", MAX_LENGTH,
-          "characters, and contain:")
+    print(f"Your password must be between {MIN_LENGTH} and {MAX_LENGTH} "
+          f"characters, and contain:")
     print("\t1 or more uppercase characters")
     print("\t1 or more lowercase characters")
     print("\t1 or more numbers")
     if SPECIAL_CHARS_REQUIRED:
-        print("\tand 1 or more special characters: ", SPECIAL_CHARACTERS)
+        print(f"\tand 1 or more special characters: {SPECIAL_CHARACTERS}")
     password = input("> ")
     while not is_valid_password(password):
         print("Invalid password!")
