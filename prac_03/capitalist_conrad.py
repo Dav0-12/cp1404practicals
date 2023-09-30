@@ -15,12 +15,14 @@ MIN_PRICE = 1
 MAX_PRICE = 100
 INITIAL_PRICE = 10.0
 OUTPUT_FILE = "stock_prices.txt"
-price = INITIAL_PRICE
+
 
 outfile = open(OUTPUT_FILE, "w")
+
+price = INITIAL_PRICE
+day_counter = 1
 print(f"Starting Price: ${price:,.2f}", file=outfile)
 
-day_counter = 1
 while MIN_PRICE <= price <= MAX_PRICE:
     price_change = 0
     # generate a random integer of 1 or 2
