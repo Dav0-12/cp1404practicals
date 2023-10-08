@@ -4,9 +4,14 @@ List Exercises Practical
 
 
 numbers = []
-for i in range(5):
-    number = int(input("Number: "))
+number = int(input("Number 1: "))
+count = 1
+while number > 0:
+    count += 1
     numbers.append(number)
+    number = int(input(f"Number {count}: "))
+
+
 print(f"The first number is {numbers[0]}")
 print(f"The last number is {numbers[-1]}")
 print(f"The smallest number is {min(numbers)}")
