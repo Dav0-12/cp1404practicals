@@ -6,6 +6,7 @@ MAXIMUM_NUMBER = 45
 NUMBERS_PER_LINE = 6
 
 def main():
+    """Calculate and display quick picks"""
     try:
         number_of_quick_picks = int(input("How many quick picks do you want to generate? "))
         quick_picks = create_quick_picks(number_of_quick_picks)
@@ -15,6 +16,7 @@ def main():
 
 
 def create_quick_picks(number_of_quick_picks):
+    """Create an n x 6 matrix of random numbers between MINIMUM_NUMBER and MAXIMUM_NUMBER"""
     quick_picks = []
     validated = False
     for line in range(number_of_quick_picks):
@@ -33,6 +35,7 @@ def create_quick_picks(number_of_quick_picks):
 
 
 def display_quick_picks(numbers):
+    """Display matrix of numbers"""
     for line in range(len(numbers)):
         # string = " ".join([str(number) for number in numbers[line]])
         for column in range(len(numbers[line])):
