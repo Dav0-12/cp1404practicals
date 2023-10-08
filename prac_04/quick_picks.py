@@ -31,7 +31,7 @@ def create_quick_picks(number_of_quick_picks):
                     random_number = random.randint(MINIMUM_NUMBER, MAXIMUM_NUMBER)
             quick_pick.append(random_number)
             validated = False
-        quick_picks.append(quick_pick)
+        quick_picks.append(sorted(quick_pick))
     return quick_picks
 
 
@@ -40,7 +40,7 @@ def display_quick_picks(numbers):
     for line in range(len(numbers)):
         # string = " ".join([str(number) for number in numbers[line]])
         for column in range(len(numbers[line])):
-            print(f"{numbers[line][column]:<2}", end=" ")
+            print(f"{numbers[line][column]:2}", end=" ")
         print("\r")
 
 
