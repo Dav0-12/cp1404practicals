@@ -17,6 +17,7 @@ def main():
 
 
 def print_report(incomes):
+    """Print the income and total consecutive amount earned for each month"""
     print("\nIncome Report\n-------------")
     number_of_months = len(incomes)
     total = 0

@@ -5,6 +5,7 @@ MINIMUM_NUMBER = 1
 MAXIMUM_NUMBER = 45
 NUMBERS_PER_LINE = 6
 
+
 def main():
     """Calculate and display quick picks"""
     try:
@@ -39,7 +40,7 @@ def display_quick_picks(numbers):
     for line in range(len(numbers)):
         # string = " ".join([str(number) for number in numbers[line]])
         for column in range(len(numbers[line])):
-            print(f"{numbers[line][column]:2}", end=" ")
+            print(f"{numbers[line][column]:<2}", end=" ")
         print("\r")
 
 
