@@ -19,10 +19,8 @@ def main():
 def print_report(incomes):
     """Print the income and total consecutive amount earned for each month"""
     print("\nIncome Report\n-------------")
-    number_of_months = len(incomes)
     total = 0
-    for month in range(1, number_of_months + 1):
-        income = incomes[month - 1]
+    for month, income in enumerate(incomes, 1):
         total += income
         print("Month {:2} - Income: ${:10.2f} \t\t Total: ${:10.2f}".format(month, income, total))
 
