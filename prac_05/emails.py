@@ -6,6 +6,7 @@ Actual:   19 minutes
 
 
 def main():
+    """Extract name from email, confirm it is the correct name, store and then print"""
     email_to_name = {}
     email = input("Gimme your email: ")
     while email != "":
@@ -25,7 +26,9 @@ def main():
 
 
 def extract_name(email):
-    name = email.split("@")[0].replace(".", " ").title()  # Remove the .my.jcu.edu.au, etc from the end
+    """Extracts a name from an email"""
+    # Remove the .my.jcu.edu.au, etc from the end, replace any dots with spaces, and change case to title case
+    name = email.split("@")[0].replace(".", " ").title()
     return name
 
 
