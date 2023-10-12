@@ -10,12 +10,12 @@ FILENAME = "wimbledon.csv"
 
 def main():
     """Extract Wimbledon data and display it"""
-    champion_to_victories, countries = extract_data()
+    champion_to_victories, countries = extract_wimbledon_data()
     display_champions(champion_to_victories)
     display_countries(countries)
 
 
-def extract_data():
+def extract_wimbledon_data():
     """Extract champion and country data from file"""
     champion_to_victories = {}
     countries = []
