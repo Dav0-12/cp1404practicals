@@ -8,7 +8,7 @@ Actual:   19 minutes
 def main():
     """Extract names from emails and then print them"""
     email_to_name = {}
-    email = input("What is your email: ")
+    email = input("Please enter your email: ")
     while email != "":
         name = extract_name(email)
         choice = input(f"Is your name {name}? (Y/n)").upper()
@@ -17,7 +17,7 @@ def main():
         else:
             actual_name = input("Name: ")
             email_to_name[email] = actual_name
-        email = input("What is your email: ")
+        email = input("Please enter your email: ")
 
     print("\n")
     for email, name in email_to_name.items():
