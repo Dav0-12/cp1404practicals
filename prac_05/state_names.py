@@ -18,6 +18,5 @@ while state_code != "":
 
 
 max_code_length = max(len(code) for code in CODE_TO_NAME.keys())
-max_name_length = max(len(name) for name in CODE_TO_NAME.values())
 for code, name in CODE_TO_NAME.items():
-    print(f"{code:{max_code_length}} is {name:{max_name_length}}")
+    print(f"{code:{max_code_length}} is {name}")

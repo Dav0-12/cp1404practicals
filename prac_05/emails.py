@@ -6,7 +6,7 @@ Actual:   19 minutes
 
 
 def main():
-    """Extract name from email, confirm it is the correct name, store and then print"""
+    """Extract names from emails and then print them"""
     email_to_name = {}
     email = input("Gimme your email: ")
     while email != "":
@@ -18,7 +18,6 @@ def main():
             actual_name = input("Name: ")
             email_to_name[email] = actual_name
         email = input("Gimme your email: ")
-        extract_name(email)
 
     print("\n")
     for email, name in email_to_name.items():
