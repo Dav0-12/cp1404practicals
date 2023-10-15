@@ -17,7 +17,7 @@ def main():
         else:
             actual_name = input("Name: ")
             email_to_name[email] = actual_name
-        email = input("Gimme your email: ")
+        email = input("What is your email: ")
 
     print("\n")
     for email, name in email_to_name.items():
