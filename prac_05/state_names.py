@@ -14,7 +14,7 @@ while state_code != "":
         print(state_code, "is", CODE_TO_NAME[state_code])
     except KeyError:
         print("Invalid short state")
-    state_code = input("Enter short state: ")
+    state_code = input("Enter short state: ").upper()
 
 
 max_code_length = max(len(code) for code in CODE_TO_NAME.keys())
