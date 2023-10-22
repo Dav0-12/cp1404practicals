@@ -1,7 +1,7 @@
 """
 Prac 06 - languages
 Estimated duration: 30 mins
-Actual duration:
+Actual duration: 25 mins
 """
 
 from prac_06.programming_language import ProgrammingLanguage
