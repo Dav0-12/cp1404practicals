@@ -1,7 +1,7 @@
 """
 Prac 06 - Guitar prac
-Estimated duration: 25 mins
-Actual duration:
+Estimated duration: 40 mins
+Actual duration: 31 mins
 """
 
 from prac_06.guitar import Guitar
