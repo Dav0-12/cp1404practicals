@@ -5,7 +5,8 @@ Actual Duration:
 """
 
 from prac_07.project import Project
-import datetime
+from datetime import datetime
+from operator import attrgetter
 
 MENU = """- (L)oad projects  
 - (S)ave projects  
@@ -38,30 +39,27 @@ def main():
             if completion != "":
                 projects[selected_project].completion = completion
 
-            priority = input("New priority")
+            priority = input("New priority: ")
             if priority != "":
-                projects[selected_project].priority = priority
+                projects[selected_project].priority = int(priority)
         elif choice == "A":
             print("Let's add a new project!")
             name = input("Name: ")
             start_date = input("Start date (dd/mm/yy): ")
             priority = int(input("Priority: "))
-            estimate = float(input("Cost estimate: "))
+            estimate = float(input("Cost estimate: $"))
             completion = int(input("Percent complete: "))
             projects.append(Project(name, start_date, priority, estimate, completion))
         elif choice == "F":
             date_string = input("Show projects that start after date (dd/mm/yy): ")
-            date = datetime.datetime.strptime(date_string, "%d/%m/%Y").date()
-
-
-
+            start_date = datetime.strptime(date_string, "%d/%m/%Y").date()
+            for project in sorted(projects, key=attrgetter("start_date")):
+                if project.start_date >= start_date:
+                    print(f"  {project}")
         else:
             print("Not a valid choice")
         print(MENU)
         choice = input(">> ").upper()
-
-
-
 
 
 def load_project_data(filename):
@@ -78,16 +76,14 @@ def display_projects(projects, include_indexing):
     if include_indexing:
         for i, project in enumerate(projects):
             print(f"{i}  {project}")
-
-
     else:
         print("Incomplete projects:")
-        for project in projects:
+        for project in sorted(projects):
             if not project.is_complete():
                 print(f"  {project}")
 
         print("Complete projects:")
-        for project in projects:
+        for project in sorted(projects):
             if project.is_complete():
                 print(f"  {project}")
 
@@ -96,8 +92,8 @@ def save_project_data(filename, projects):
     with open(filename, "w") as out_file:
         print("Name\tStart Date\tPriority\tCost Estimate\tCompletion Percentage", file=out_file)
         for project in projects:
-            formatted_project = "\t".join(*project)
-            print(f'{formatted_project}')
+            print(f"{project[0]}\t{project[1]}\t{project[2]}\t{project[3]}\t{project[4]}")
+
 
 
 main()
