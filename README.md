@@ -2,7 +2,7 @@
 
 ## About me:
 
-I am a second year engineering IT student who is developing their skills in python
+I am a second year engineering IT student who is developing their skills in python.
 
 ## This Repository:
 
