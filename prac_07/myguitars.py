@@ -1,7 +1,7 @@
 """
 Prac 07 - More Guitars Exercise
 Estimated Duration: 15 mins
-Actual Duration:
+Actual Duration: 30 mins
 """
 
 import csv
@@ -19,10 +19,11 @@ with open(FILE_NAME, 'r', newline='') as in_file:
 name = input("Name: ")
 while name != "":
     year = int(input("Year: "))
-    price = float(input("Price: "))
-    guitars.append(Guitar(name, year, price))
+    cost = float(input("Cost: "))
+    guitars.append(Guitar(name, year, cost))
     name = input("Name: ")
 
 with open(FILE_NAME, 'w') as out_file:
     for guitar in sorted(guitars):
         print(f'{guitar.name},{guitar.year},{guitar.cost}', file=out_file)
+        print(guitar)
