@@ -9,7 +9,7 @@ class Guitar:
         self.cost = cost
 
     def __str__(self):
-        return f"{self.name} ({self.name}) : ${self.cost}"
+        return f"{self.name} ({self.year}) : ${self.cost}"
 
     def get_age(self, current_year):
         """Calculate the age of the guitar given the current year"""
