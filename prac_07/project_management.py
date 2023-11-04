@@ -1,7 +1,7 @@
 """
 Prac 07 - Project Management
 Estimated Duration: 60 minutes
-Actual Duration:
+Actual Duration: 73 minutes
 """
 
 from prac_07.project import Project
@@ -18,6 +18,7 @@ MENU = """- (L)oad projects
 
 
 def main():
+    """Allow users to load, update and save project data"""
     projects = []
     print(MENU)
     choice = input(">> ").upper()
@@ -63,6 +64,7 @@ def main():
 
 
 def load_project_data(filename):
+    """Load data from file given by filename. Returns a nested list of project data"""
     projects = []
     with open(filename, "r") as in_file:
         in_file.readline()
@@ -73,6 +75,7 @@ def load_project_data(filename):
 
 
 def display_projects(projects, include_indexing):
+    """Display incomplete and complete projects, with or without numbered indexing"""
     if include_indexing:
         for i, project in enumerate(projects):
             print(f"{i}  {project}")
@@ -89,11 +92,11 @@ def display_projects(projects, include_indexing):
 
 
 def save_project_data(filename, projects):
+    """Save project data to the file given by filename"""
     with open(filename, "w") as out_file:
         print("Name\tStart Date\tPriority\tCost Estimate\tCompletion Percentage", file=out_file)
         for project in projects:
             print(f"{project[0]}\t{project[1]}\t{project[2]}\t{project[3]}\t{project[4]}")
-
 
 
 main()

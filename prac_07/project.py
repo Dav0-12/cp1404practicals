@@ -12,11 +12,14 @@ class Project:
         self.completion = completion
 
     def __lt__(self, other):
+        """Less than (<) will compare priority for this class"""
         return self.priority < other.priority
 
     def __repr__(self):
+        """Defines the string that will be displayed when the class is printed"""
         return (f'{self.project}, start: {self.start_date.strftime("%d/%m/%Y")}, priority {self.priority}, '
                 f'estimate: ${self.estimate}, completion: {self.completion}%')
 
     def is_complete(self):
+        """Return True if the project is 100% complete"""
         return self.completion == 100
