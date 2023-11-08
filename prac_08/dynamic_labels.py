@@ -17,7 +17,7 @@ class DynamicLabels(App):
     def __init__(self, **kwargs):
         """Construct main app."""
         super().__init__(**kwargs)
-        # basic data (model) example - dictionary of names: phone numbers
+        # basic data (model) example - list of names
         self.names = ["Bob Brown", "Cat Cyan", "Oren Ochre"]
 
     def build(self):
@@ -30,7 +30,7 @@ class DynamicLabels(App):
     def create_labels(self):
         """Build the labels dynamically from a list of names"""
         for name in self.names:
-            # create a button for each data entry, specifying the text
+            # create a label for each data entry, specifying the text
             temp_label = Label(text=name)
             # set the label's text colour to a random colour. Just for fun.
             temp_label.color = (random(), random(), random(), 1)
